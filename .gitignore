@@ -10,10 +10,8 @@ cython_debug/
 *__pycache__/
 *.py[cod]
 
-# data
-data
+# data (CSV exports in data/ are tracked)
 *.zip
-*.csv
 *.db
 *.graphml
 # *.pickle
@@ -30,4 +28,7 @@ data
 # project
 .env
 .streamlit
-environment.yml
+
+# virtual environments
+.venv/
+venv/
