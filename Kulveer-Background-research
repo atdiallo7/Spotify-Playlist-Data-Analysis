@@ -1,0 +1,28 @@
+# Background Research
+
+## Similar Project 2: Music Genre Trends Analysis
+
+**Project Link:**  
+https://github.com/DhruvSTrivedi/Music-Genre-Trends-Analysis/blob/main/README.md
+
+### Main ideas from the project
+- The project compared **energy and emotion between different music genres**.
+- It also looked at differences in **energy and emotion within genres**.
+- The analysis used Spotify audio features such as **energy and valence**.
+- Valence was used to represent the positive or negative emotional feeling of a song.
+
+### What is useful for our project
+This project is useful because it shows that songs can be compared using their audio features instead of only looking at their genre labels.
+
+The comparison within the same genre is especially interesting for our project. If songs that have the same genre label show different combinations of energy, valence, danceability, or other audio features, they may form smaller groups.
+
+### How this can help our project
+We can build on this idea by using multiple Spotify audio features together. We can check:
+
+- how similar or different genres are from each other
+- whether songs within the same genre naturally separate into clusters
+- whether those clusters could represent possible subgenres
+- whether audio-feature similarity can later be used to recommend similar songs
+
+### Additional observation
+The similar project mainly focused on comparing music trends and audio characteristics. Our project can extend this by using clustering and similarity analysis to study whether Spotify genre labels match the actual audio characteristics of the songs.
