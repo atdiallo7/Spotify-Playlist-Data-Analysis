@@ -5,24 +5,22 @@
 **Project Link:**  
 https://github.com/DhruvSTrivedi/Music-Genre-Trends-Analysis/blob/main/README.md
 
-### Main ideas from the project
-- The project compared **energy and emotion between different music genres**.
-- It also looked at differences in **energy and emotion within genres**.
-- The analysis used Spotify audio features such as **energy and valence**.
-- Valence was used to represent the positive or negative emotional feeling of a song.
+# useful findings for our project:
+
+The project also analyzed track popularity and artist popularity, which gives us another way to compare songs.
+It studied music from 2010–2022, showing that genre characteristics can change over time.
+It included danceability in addition to energy and valence, giving us another audio feature we could consider.
+It compared several different genres, which can help us decide how to organize genre comparisons in our own analysis.
+The visualizations used in the project can give us ideas for graphs and comparisons in our project.
+
+
+## Similar project 3: Every noise analysis
+https://github.com/sofielange98/every-noise-network-analysis
 
 ### What is useful for our project
-This project is useful because it shows that songs can be compared using their audio features instead of only looking at their genre labels.
+- It shows that multiple Spotify audio features can be used together to compare songs and genres.
+- K-Means clustering can help us see whether songs naturally form groups instead of relying only on genre labels.
+- Correlation analysis can help us understand which audio features are related before clustering.
+- The clustering approach may help us explore possible subgenres within our dataset.
+- Similarity between clusters could also be useful later for song recommendations.
 
-The comparison within the same genre is especially interesting for our project. If songs that have the same genre label show different combinations of energy, valence, danceability, or other audio features, they may form smaller groups.
-
-### How this can help our project
-We can build on this idea by using multiple Spotify audio features together. We can check:
-
-- how similar or different genres are from each other
-- whether songs within the same genre naturally separate into clusters
-- whether those clusters could represent possible subgenres
-- whether audio-feature similarity can later be used to recommend similar songs
-
-### Additional observation
-The similar project mainly focused on comparing music trends and audio characteristics. Our project can extend this by using clustering and similarity analysis to study whether Spotify genre labels match the actual audio characteristics of the songs.
