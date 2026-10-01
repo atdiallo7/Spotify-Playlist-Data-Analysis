@@ -1,3 +1,13 @@
-pandas==3.0.6
-numpy==2.5.3
-ipykernel==7.3.0
+# Kept in sync with environment.yml
+pandas>=3.0.6
+numpy>=2.5.3
+plotly>=7.1.0
+nbformat>=4.2.0
+ipykernel>=7.3.0
+streamlit
+nbstripout>=0.9.1
+
+# Declared previously but not imported anywhere yet -- uncomment when used
+# matplotlib
+# requests
+# scikit-learn
