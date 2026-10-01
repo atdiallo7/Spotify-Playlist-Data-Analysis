@@ -2,3 +2,4 @@ pandas>=3.0.6
 numpy>=2.5.3
 ipykernel>=7.3.0
 plotly>=7.1.0
+nbformat>=4.2.0
