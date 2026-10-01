@@ -2,13 +2,18 @@ name: dsci-d501-project
 channels:
   - conda-forge
   - defaults
+# Kept in sync with requirements.txt
 dependencies:
   - python=3.11
-  - streamlit
   - pandas
-  - ipykernel
   - numpy
-  - matplotlib
-  - requests
-  - scikit-learn
+  - plotly
+  - nbformat
+  - ipykernel
+  - streamlit
+  - nbstripout
   - pip
+  # Declared previously but not imported anywhere yet -- uncomment when used
+  # - matplotlib
+  # - requests
+  # - scikit-learn
