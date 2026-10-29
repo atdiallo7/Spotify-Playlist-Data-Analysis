@@ -1,0 +1,14 @@
+name: dsci-d501-project
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - streamlit
+  - pandas
+  - ipykernel
+  - numpy
+  - matplotlib
+  - requests
+  - scikit-learn
+  - pip
