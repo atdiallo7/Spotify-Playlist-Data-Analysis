@@ -6,8 +6,8 @@ nbformat>=4.2.0
 ipykernel>=7.3.0
 streamlit
 nbstripout>=0.9.1
+scikit-learn
 
 # Declared previously but not imported anywhere yet -- uncomment when used
 # matplotlib
 # requests
-# scikit-learn

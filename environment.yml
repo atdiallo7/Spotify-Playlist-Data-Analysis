@@ -12,8 +12,8 @@ dependencies:
   - ipykernel
   - streamlit
   - nbstripout
+  - scikit-learn
   - pip
   # Declared previously but not imported anywhere yet -- uncomment when used
   # - matplotlib
   # - requests
-  # - scikit-learn
