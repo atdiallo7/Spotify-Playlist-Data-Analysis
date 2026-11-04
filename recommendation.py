@@ -60,4 +60,4 @@ def recommend_songs(song_name, artist_name):
 
 # Test the recommendation function
 if __name__ == "__main__":
-    print(recommend_songs("Starboy", "The Weeknd;Daft Punk"))
+    print(recommend_songs("Blinding Lights", "The Weeknd"))
