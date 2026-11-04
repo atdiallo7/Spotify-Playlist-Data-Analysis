@@ -6,6 +6,7 @@ Run locally with:
 """
 
 import streamlit as st
+from recommendation import recommend_songs, songs
 
 from utils import __version__  # noqa: F401 -- confirms the utils package imports cleanly
 
@@ -28,6 +29,30 @@ def main():
 
     st.header("Analysis")
     st.write("Add charts, models, or other analysis here.")
+    
+    
+    # Song recommendation section
+    st.header("Song Recommendations")
+
+    # Select a song
+    song_list = sorted(songs["Track Name"].dropna().unique())
+    song_name = st.selectbox("Select a song", song_list)
+
+    # Select the artist
+    artists = songs[songs["Track Name"] == song_name]
+    artist_list = sorted(artists["Artist Name(s)"].dropna().unique())
+    artist_name = st.selectbox("Select an artist", artist_list)
+
+    # Show five similar songs
+    if st.button("Get Recommendations"):
+        results = recommend_songs(song_name, artist_name)
+
+        if isinstance(results, str):
+            st.warning(results)
+        else:
+            st.write("Recommended songs:")
+            st.dataframe(results, hide_index=True)
+
 
 
 if __name__ == "__main__":
