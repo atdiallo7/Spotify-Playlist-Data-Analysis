@@ -1,3 +1,6 @@
+# Part 3: Spotify Song Recommendation
+# Author: Kulveer Kaur
+# Uses existing K-Means clusters to recommend similar songs.
 
 import pandas as pd
 
@@ -14,7 +17,6 @@ features = [
     "Instrumentalness (prepared)",
     "Valence (prepared)"
 ]
-
 
 def recommend_songs(song_name, artist_name):
     # Find the selected song
