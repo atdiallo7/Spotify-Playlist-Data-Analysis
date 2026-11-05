@@ -54,14 +54,6 @@ def main():
             st.dataframe(results, hide_index=True)
 
             
-    # Issues we faced during the project
-    st.header("Issues")
-    st.write(
-        "We found duplicate songs in the dataset, so I added "
-        "a way to remove repeated recommendations. "
-        "Some recommended songs may also be from different genres "
-        "because we are comparing audio features."
-    )
 
     # Next steps for the project
     st.header("Next Steps")
