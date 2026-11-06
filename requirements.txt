@@ -1,14 +1,12 @@
-# Kept in sync with environment.yml
-pandas>=3.0.6
-numpy>=2.5.3
-plotly>=7.1.0
-nbformat>=4.2.0
-ipykernel>=7.3.0
+# Runtime dependencies for the Streamlit app (app.py + pages/)
 streamlit
-nbstripout>=0.9.1
+pandas
+numpy
+plotly
 scikit-learn
 scipy
 
-# Declared previously but not imported anywhere yet -- uncomment when used
-# matplotlib
-# requests
+# Dev-only (notebooks / git hooks) -- not needed to deploy:
+# nbformat
+# ipykernel
+# nbstripout
