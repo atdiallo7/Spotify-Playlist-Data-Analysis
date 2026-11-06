@@ -13,6 +13,7 @@ dependencies:
   - streamlit
   - nbstripout
   - scikit-learn
+  - scipy
   - pip
   # Declared previously but not imported anywhere yet -- uncomment when used
   # - matplotlib
