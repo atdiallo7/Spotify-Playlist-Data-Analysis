@@ -32,6 +32,15 @@ We developed an interactive Streamlit application with four main features:
 
 The application also allows users to listen to recommended songs through Spotify and download playlists as CSV files.
 
+### Recommendation Approach
+
+Our recommendation system mainly uses **content-based filtering** based on seven Spotify audio features.
+
+- **Similar Songs:** Uses K-Means clusters and Euclidean distance to recommend songs similar to the user's favorites.
+- **Mood & Activity:** Uses rule-based scoring to recommend songs based on selected moods or activities.
+- **Hybrid:** Combines similarity and mood scores using adjustable weights.
+
+The system does not use collaborative filtering because it does not rely on other users' listening histories or ratings.
 ## Recommendation Methods
 
 The recommendation system uses seven prepared Spotify audio features:
