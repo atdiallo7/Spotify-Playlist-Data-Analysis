@@ -9,8 +9,9 @@ import re
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+import altair as alt
 
-from playlist_recommender import (
+from recommendation import  (
     FEATURES,
     MOOD_PROFILES,
     build_playlist,
@@ -502,12 +503,83 @@ with tab_evaluation:
             "Track Name"
         )
 
-        st.bar_chart(
-            chart_data[
-                ["similarity_score", "mood_score", "hybrid_score"]
-            ],
-            stack=False,
-            horizontal=True
+        
+        
+        # Show playlist summary.
+        st.subheader("🎧 Playlist Overview")
+
+        col1, col2, col3 = st.columns(3)
+
+        col1.metric("Songs", len(hybrid_results))
+        col2.metric(
+            "Unique Artist Entries",
+            hybrid_results["Artist Name(s)"].nunique()
+        )
+        col3.metric(
+            "Duplicates",
+            hybrid_results.duplicated(
+                ["Track Name", "Artist Name(s)"]
+            ).sum()
+        )
+
+        st.divider()
+        st.subheader("🎯 Recommendation Scorecard")
+
+        # Prepare scores for the heatmap.
+        scores = chart_data[
+            ["similarity_score", "mood_score", "hybrid_score"]
+        ].rename(columns={
+            "similarity_score": "Similarity",
+            "mood_score": "Mood",
+            "hybrid_score": "Hybrid"
+        }).reset_index()
+
+        scores = scores.melt(
+            "Track Name", var_name="Method", value_name="Score"
+        )
+
+       
+        # Create colored boxes for each score.
+        chart = alt.Chart(scores).mark_rect().encode(
+            x=alt.X(
+                "Method:N",
+                title=None,
+                sort=["Similarity", "Mood", "Hybrid"],
+                axis=alt.Axis(labelAngle=0)
+            ),
+            y=alt.Y(
+                "Track Name:N",
+                title=None,
+                axis=alt.Axis(labelLimit=250)
+            ),
+            color=alt.Color(
+                "Method:N",
+                scale=alt.Scale(
+                    domain=["Similarity", "Mood", "Hybrid"],
+                    range=["#2563EB", "#C2410C", "#7E22CE"]
+                ),
+                legend=None
+            ),
+            tooltip=["Track Name", "Method", "Score"]
+        )
+
+        # Display the score inside each box.
+        labels = alt.Chart(scores).mark_text(
+            color="white",
+            fontSize=15
+        ).encode(
+            x=alt.X(
+                "Method:N",
+                sort=["Similarity", "Mood", "Hybrid"]
+            ),
+            y="Track Name:N",
+            text=alt.Text("Score:Q", format=".0f")
+        )
+
+        # Show the heatmap in Streamlit.
+        st.altair_chart(
+            (chart + labels).properties(height=350),
+            use_container_width=True
         )
 
         st.caption(

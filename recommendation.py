@@ -1,7 +1,6 @@
-"""Spotify playlist recommender using audio similarity, mood, and hybrid methods."""
+"""Spotify playlist recommender using audio similarity, mood, and hybrid methods.
 
 Uses the processed audio features and clusters from the team's existing work.
-The original recommendation.py and app.py are not modified.
 """
 
 from pathlib import Path
