@@ -6,11 +6,12 @@ channels:
 dependencies:
   - python=3.11
   - pandas
-  - numpy
+  - numpy=2.4.*
   - plotly
   - nbformat
   - ipykernel
   - streamlit
+  - altair
   - nbstripout
   - scikit-learn
   - pip
