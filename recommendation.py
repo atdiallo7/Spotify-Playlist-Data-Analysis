@@ -1,4 +1,4 @@
-"""Optional multi-song playlist recommender for the Spotify team project.
+"""Spotify playlist recommender using audio similarity, mood, and hybrid methods."""
 
 Uses the processed audio features and clusters from the team's existing work.
 The original recommendation.py and app.py are not modified.
